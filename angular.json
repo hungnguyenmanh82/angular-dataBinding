@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app1-componentVariable"
+    }
+  },
+  "defaultProject": "app1-componentVariable",
+  "cli": {
+    "analytics": "bfba8157-5cbb-40bf-89ad-75c13e711300"
+  }
 }
