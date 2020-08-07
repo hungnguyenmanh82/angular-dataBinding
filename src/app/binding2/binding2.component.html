@@ -1,0 +1,15 @@
+<!-- Angular chi update binding khi có event phát sinh-->
+<!-- (keyup)="0" là một event để thông báo Angular update binding. Ta có thể dùng event khác -->
+<div class="binding2-component-layout"  (keyup)="0" >
+  <h1>Binding2Component here</h1>
+  <p> binding 2way example</p>
+
+  <!-- #heroInput: là tên biến đại diện cho input dùng như biến javaScript  -->
+  <!-- xem project call child component from Parent template html -->
+  <input #heroInput>
+
+  <h2> {{heroInput.value}} </h2>
+
+  <!-- expression là javaScript nên biến ko cần {{}} -->
+  <button class="button" (click)="this.submitMessage(heroInput.value)">submit</button>
+</div>

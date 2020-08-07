@@ -1,0 +1,10 @@
+<div class="ngfor-component-layout">
+  <h1>ng-for component here:</h1>
+  <p>angular *ngFor example</p>
+  <ul>
+    <li *ngFor="let customer of customers">{{customer.name}} : {{customer.age}} years</li>
+  </ul>
+  <h2> example 2: </h2>
+  <!-- vùng trong expression của (click) là JavaScript ko cần {{}} -->
+  <button class="button" *ngFor="let customer of customers" (click)="this.clickButton(customer.name)">{{customer.name}} </button>
+</div>
