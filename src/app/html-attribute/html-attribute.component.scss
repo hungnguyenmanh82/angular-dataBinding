@@ -1,3 +1,7 @@
+/*cần phải import để dùng @extend */
+@import '../../styles.scss';
+// <reference path="../../styles.scss" />.
+
 .html-attribute-component-layout{
   width: fit-content;
   height: fit-content;
@@ -9,9 +13,9 @@
   border-color: blue;
   margin-top: 20px;
 }
-
+/*
 .button-class{
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -21,5 +25,15 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+*/
+
+.button-class{
+  @extend .button;   /* ../../styles.scss */
+  background-color: red;
+}
+
+.button-test{
+  @extend .button-class;
 }
 

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormInputComponent implements OnInit {
 
+  inputValue = "tuyet voi";
   constructor() { }
 
   ngOnInit(): void {
@@ -14,5 +15,6 @@ export class FormInputComponent implements OnInit {
 
   submitMessage(message:string){
     window.alert(message);
+    this.inputValue = "tuyet";
   }
 }

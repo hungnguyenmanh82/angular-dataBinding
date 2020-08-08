@@ -7,6 +7,8 @@ import { Binding2Component } from './binding2/binding2.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { HtmlAttributeComponent } from './html-attribute/html-attribute.component';
 import { FormInputComponent } from './form-input/form-input.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { FormInputComponent } from './form-input/form-input.component';
     Binding2Component,
     NgForComponent,
     HtmlAttributeComponent,
-    FormInputComponent
+    FormInputComponent,
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

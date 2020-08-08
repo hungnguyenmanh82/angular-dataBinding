@@ -5,14 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './binding2.component.html',
   styleUrls: ['./binding2.component.scss']
 })
-export class Binding2Component implements OnInit {
+export class Binding2Component  {
+  name: string = '';
 
-  constructor() { }
-
-  ngOnInit(): void {
+  setValue() {
+    this.name = 'Nancy';
   }
 
-  submitMessage(message:string){
-    window.alert(message);
-  }
+
 }

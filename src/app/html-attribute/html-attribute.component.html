@@ -1,12 +1,13 @@
 <div class="html-attribute-component-layout">
   <h1>html-attribute with Angular:</h1>
+  <p> @input = [] với các html tag chuẩn </p>
   <!-- url là biến trên *.component.ts -->
   <!-- src là attribute cua <img> tag -->
   <img [src]="url">
 
   <!-- buttonState = true/false -->
-  <button [disabled]="buttonState" class="button"> disable button</button>
+  <button [disabled]="buttonState" class="button-class"> disable button</button>
 
   <!-- trong expression là javaScript. Lưu ý single quote -->
-  <button [ngClass]="{'button-class': true}">ngClass</button>
+  <button [ngClass]="{'button': true}">ngClass</button>
 </div>
