@@ -1,0 +1,46 @@
+<div class="ng-class-component-layout">
+  <hr>
+  <h2 id="ngClass">NgClass Binding</h2>
+
+  <p>currentClasses is {{currentClasses | json}}</p>
+
+  <!-- nếu viết tường minh như sau thì mỗi thành phần con đc update sẽ update CSS -->
+  <div [ngClass]="{'saveable':isSaveable, 'modified':isModified, 'special':isSpecial}">This div is initially saveable,
+    unchanged, and special.</div>
+
+  <!-- tip trick: dùng dòng này để Jump SCSS class ở trên-->
+  <!-- tên CSS ko đc trùng với tên biến trên TypeScript nếu ko sẽ Jump sai -->
+  <div class="saveable modified special" > jump SCSS in htlm </div>
+  <ul>
+    <li>
+      <label for="saveable">saveable</label>
+      <input type="checkbox" [(ngModel)]="isSaveable" id="saveable">
+    </li>
+    <li>
+      <label for="modified">modified:</label>
+      <input type="checkbox" [(ngModel)]="isModified" id="modified">
+    </li>
+    <li>
+      <label for="special">special:</label>
+      <input type="checkbox" [(ngModel)]="isSpecial" id="special">
+    </li>
+  </ul>
+  <button (click)="setCurrentClasses()">Refresh currentClasses</button>
+
+  <!-- currentClasses là biến chứa json. @input [] sẽ đc update nếu biến đc update  -->
+  <!-- nếu thành phần con của biến Json đc update thì nó sẽ ko update => phải tạo lại currentClasses -->
+  <div [ngClass]="currentClasses">
+    This div should be {{ isSaveable ? "": "not"}} saveable,
+    {{ isModified ? "unmodified" : "modified" }} and
+    {{ isSpecial ? "": "not"}} special after clicking "Refresh".</div>
+
+  <p style="color: red;"> nhược điểm NgClass: là ko jump đc CSS class khi <span style="color: black;"> Ctrl + +Click </span> ở
+    html
+    <br>
+    vì trình Parser ko support parser ngClass => ta phải dùng tip trick
+    <br>
+    ngClass ko nên đc build ở trong TypeScript, như thế sẽ khó đọc code html
+    <br>
+    ngClass nên viết tường minh trong html code => như thế dễ nhìn. Và update đc khi từng thành phần thay đổi.
+  </p>
+</div>
