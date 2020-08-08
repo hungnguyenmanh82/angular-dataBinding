@@ -7,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Binding2Component  {
   name: string = '';
+  email: string ='';
+  password: string = '';
+  address:string='';
 
-  setValue() {
+  setName() {
     this.name = 'Nancy';
   }
 
+  setEmail(){
+    this.email = "hung@gmail.com";
+  }
 
+  setPassword(){
+    this.password = "password 123";
+  }
+
+  setUppercaseName(address:string){
+    this.address = address.toUpperCase();
+  }
 }

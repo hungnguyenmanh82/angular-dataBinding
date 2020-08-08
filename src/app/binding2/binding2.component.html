@@ -1,17 +1,59 @@
-
 <div class="binding2-component-layout">
-  <h1 >Two-way Binding component: </h1>
+  <h1>Two-way Binding component: </h1>
+  <p style="color: red;"> cách 1: gộp @input [] và @output () vào làm 1 </p>
+  <p>
+    <span>Value: {{ name }}</span>
+    <br>
+    <label for="example-ngModel">[(ngModel)]:</label>
+    <!-- two way binding = @input [] and @output () -->
+    <!-- <input> là trường hợp đặc biệt mới viết gọn thế này kết hợp () và [] -->
+    <!-- cân import FormsModule vào trong @ngModule mới đc -->
+    <!-- id: dung cho viec truy cap tu DOM hoac JQuery -->
+    <input type="text" [(ngModel)]="name" id="example-ngModel">
+    <button (click)="setName()" class="button">Set value</button>
+  </p>
 
-  <!-- two way binding = @input () and @output [] -->
-  <!-- <input> là trường hợp đặc biệt mới viết gọn thế này -->
-  <!-- cân import FormsModule vào trong @ngModule mới đc -->
-  <input type="text" [(ngModel)]="name" >
+  <p style="color: red;"> tách @input [] và @ouput () có cái lợi là ta có thể bắt đc $event từ @output </p>
+  <p>
+    <span>Value: {{ email }}</span>
+    <br>
+    <label for="without">without NgModel:</label>
+    <!-- @input = [], @output = () -->
+    <!-- $event = @output data cua input tag -->
+    <!-- $event: là local variable nên chỉ có tác dụng trong double quote "" -->
+    <input [value]="email" (input)="email=$event.target.value" id="without">
+    <button (click)="setEmail()" class="button">Set value</button>
+  </p>
 
-  <p>Value: {{ name }}</p>
+  <p style="color: red;"> dùng 2 cách dưới đây là hay nhất: [ngModel] và (ngModelChange) </p>
+  <p>
+    <span>Value: {{ password }}</span>
+    <br>
+    <label for="example-change">(ngModelChange)="...name=$event":</label>
+    <!-- @input = [], @output = () -->
+    <!-- $event = @output data cua input tag -->
+    <!-- () = "javaExpression" se dc trigger khi co @output event. ko dung $event van dc -->
+    <input [ngModel]="password" (ngModelChange)="password=$event" id="example-change">
+    <button (click)="setPassword()" class="button">Set value</button>
+  </p>
 
 
-  <button (click)="setValue()">Set value</button>
+  <p>
+    <span>Value: {{ address }}</span>
+    <br>
+    <label for="example-uppercase">(ngModelChange)="setUppercaseName($event)"></label>
+    <!-- @input = [], @output = () -->
+    <!-- $event = @output data cua input tag -->
+    <!-- () = "javaExpression" se dc trigger khi co @output event. ko dung $event van dc -->
+    <input [ngModel]="address" (ngModelChange)="setUppercaseName($event)" id="example-uppercase">
+    <button (click)="address='Hanoi'" class="button">Set value</button>
+  </p>
 
-
+  <p style="color: red;">
+    @Output () event chỉ đc kích hoạt khi có sự thay đổi ở bên trong component input
+    <br>
+    thay đổi component từ bên ngoài sẽ ko kích hoạt @output () event
+    <br>
+    vd: click button là thay đổi từ bên ngoài nên setUppercaseName($event) ko đc gọi
+  </p>
 </div>
-
