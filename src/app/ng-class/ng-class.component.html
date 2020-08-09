@@ -1,16 +1,17 @@
 <div class="ng-class-component-layout">
   <hr>
-  <h2 id="ngClass">NgClass Binding</h2>
+  <h2 id="ngClass">ng-class.component: [ngClass] </h2>
 
   <p>currentClasses is {{currentClasses | json}}</p>
 
   <!-- nếu viết tường minh như sau thì mỗi thành phần con đc update sẽ update CSS -->
-  <div [ngClass]="{'saveable':isSaveable, 'modified':isModified, 'special':isSpecial}">This div is initially saveable,
-    unchanged, and special.</div>
+  <div [ngClass]="{'saveable':isSaveable, 'modified':isModified, 'special':isSpecial}"> [ngClass]= " cách 1" </div>
+  <div [ngClass]="[isSaveable ? 'saveable' : '', isModified ? 'modified' : '', isSpecial ? 'special' : '']"> [ngClass]= " cách 2" </div>
 
   <!-- tip trick: dùng dòng này để Jump SCSS class ở trên-->
   <!-- tên CSS ko đc trùng với tên biến trên TypeScript nếu ko sẽ Jump sai -->
   <div class="saveable modified special" > jump SCSS in htlm </div>
+
   <ul>
     <li>
       <label for="saveable">saveable</label>

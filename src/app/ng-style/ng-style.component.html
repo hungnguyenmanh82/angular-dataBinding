@@ -1,0 +1,11 @@
+<div class="ng-style-component-layout">
+  <h1>ng-class.component:  [ngStyle]</h1>
+  <p style="color: red;">nên dùng [ngClass] thay cho [ngStyle] nếu có thể</p>
+
+  <div [style.font-size]="islargeFont ? 'x-large' : 'smaller'">
+    This div is x-large or smaller.
+  </div>
+
+  <button class="button" (click)="islargeFont = !islargeFont"> isLargeFont = {{islargeFont}}</button>
+
+</div>

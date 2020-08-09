@@ -9,6 +9,8 @@ import { HtmlAttributeComponent } from './html-attribute/html-attribute.componen
 import { FormInputComponent } from './form-input/form-input.component';
 import { FormsModule } from '@angular/forms';
 import { NgClassComponent } from './ng-class/ng-class.component';
+import { NgStyleComponent } from './ng-style/ng-style.component';
+import { NgIfComponent } from './ng-if/ng-if.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { NgClassComponent } from './ng-class/ng-class.component';
     HtmlAttributeComponent,
     FormInputComponent,
     NgClassComponent,
+    NgStyleComponent,
+    NgIfComponent,
 
   ],
   imports: [

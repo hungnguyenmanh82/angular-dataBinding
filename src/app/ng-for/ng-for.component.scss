@@ -9,3 +9,12 @@
   border-color: blue;
   margin-top: 20px;
 }
+
+.ng-for-list-box {
+  list-style-type: square; /* square, circle, none */
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+	padding: 20px;
+	max-width: 450px;
+}

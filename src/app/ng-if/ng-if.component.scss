@@ -1,0 +1,29 @@
+.ng-if-component-layout{
+  width: fit-content;
+  height: fit-content;
+  background-color: white;
+  padding: 10px;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 5px;
+  border-color: blue;
+  margin-top: 20px;
+}
+
+.ng-if-block{
+  border-style: solid;
+  border-width: 5px;
+  border-color: blueviolet;
+  padding: 5px;
+}
+
+.if-block{
+  background-color: greenyellow;
+  padding: 10px;
+  font-size: 1rem;
+}
+.else-block{
+  background-color: lightblue;
+  padding: 20px;
+  font-size: 2rem;
+}
