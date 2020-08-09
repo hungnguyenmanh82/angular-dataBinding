@@ -8,4 +8,13 @@
 
   <button class="button" (click)="islargeFont = !islargeFont"> isLargeFont = {{islargeFont}}</button>
 
+  <p>----------------------------------------------------------------------</p>
+    <!-- object.style.visibility = "visible|hidden|collapse|initial|inherit" -->
+  <!-- hidden sẽ ẩn đi, nhưng vẫn chiếm ko gian -->
+  <div [style.visibility]="isHidden ? 'hidden': 'visible'" >Show with style.visibility = </div>
+  <!-- style.display là thuộc tính của div. none: sẽ không chiếm không gian  -->
+  <div [style.display]="isHidden ? 'none' : 'block'">Show with style.display = none</div>
+
+  <button class="button" (click)="isHidden = !isHidden">Show/Hidden: {{isHidden}}</button>
+
 </div>

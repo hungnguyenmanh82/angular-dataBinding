@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import { Binding2RadioComponent } from './binding2-radio/binding2-radio.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { NgIfComponent } from './ng-if/ng-if.component';
     NgClassComponent,
     NgStyleComponent,
     NgIfComponent,
+    NgSwitchComponent,
+    Binding2RadioComponent,
 
   ],
   imports: [

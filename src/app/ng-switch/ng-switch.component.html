@@ -1,0 +1,23 @@
+<div class="ng-switch-component-layout">
+  <div>radio group: {{hero|json}} </div>
+  <p>
+    <label *ngFor="let h of heroes">
+      <!-- name = radioGroupName: nhóm tất cả các radio vào 1 group -->
+      <!-- [(ngModel)]="hero" binding 2 ways  -->
+      <!-- sẽ so sánh hero với [value] nếu bằng nhau thì selection -->
+      <input type="radio" name="radioGroupName" [(ngModel)]="hero" [value]="h">{{h.name}}
+    </label>
+    <label><input type="radio" name="radioGroupName" (click)="hero = null">None of the above</label>
+  </p>
+
+  <h4>NgSwitch</h4>
+
+  <!-- dấu "?" là optional. dùng để check null trc khi thực hiện -->
+  <div [ngSwitch]="hero?.emotion">
+    <div *ngSwitchCase="'happy'">{{hero|json}}</div>
+    <div *ngSwitchCase="'sad'">{{hero|json}}</div>
+    <div *ngSwitchCase="'confused'">{{hero|json}}</div>
+    <div *ngSwitchCase="'Magneta'">{{hero|json}}</div>
+    <div *ngSwitchDefault> switch default</div>
+  </div>
+</div>

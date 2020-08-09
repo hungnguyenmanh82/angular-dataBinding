@@ -1,13 +1,15 @@
 <div class="html-attribute-component-layout">
   <h1>html-attribute.component:</h1>
   <p> @input = [] với các html tag chuẩn </p>
+  <p> [src], [class], [style], [disabled], [] ... </p>
   <!-- url là biến trên *.component.ts -->
   <!-- src là attribute cua <img> tag -->
   <img [src]="url">
 
   <!-- buttonState = true/false -->
-  <button [disabled]="buttonState" class="button-class"> disable button</button>
+  <button [disabled]="isDisable" class="button-class"> disable button</button>
 
   <!-- trong expression là javaScript. Lưu ý single quote -->
-  <button [ngClass]="{'button': true}">ngClass</button>
+  <!-- .button class ở SCSS file -->
+  <button [class.button]="isSpecial" (click)="isSpecial = !isSpecial"> [class] </button>
 </div>

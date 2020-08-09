@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NgStyleComponent implements OnInit {
 
   islargeFont:boolean; // khởi tạo ở đây sẽ ko đc load vào DOM
+  isHidden:boolean;
   constructor() { }
 
   /**
@@ -16,6 +17,7 @@ export class NgStyleComponent implements OnInit {
   ngOnInit(): void {
     // khởi tạo ở đây sẽ sinh event để Update DOM có liên quan tới biến này
     this.islargeFont = true;
+    this.isHidden = false;
   }
 
 }

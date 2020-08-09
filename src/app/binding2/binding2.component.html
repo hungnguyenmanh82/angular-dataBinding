@@ -21,6 +21,8 @@
     <!-- @input = [], @output = () -->
     <!-- $event = @output data cua input tag -->
     <!-- $event: là local variable nên chỉ có tác dụng trong double quote "" -->
+    <!-- (input): là @output () -->
+    <!-- value: là @input [] -->
     <input [value]="email" (input)="email=$event.target.value" id="without">
     <button (click)="setEmail()" class="button">Set value</button>
   </p>
