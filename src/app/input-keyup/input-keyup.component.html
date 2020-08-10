@@ -1,0 +1,30 @@
+<!-- https://stackblitz.com/angular/oeredbxplak?file=src%2Fapp%2Flittle-tour.component.ts -->
+<div class="input-keyup-component-layout">
+  <h1> input (keyup): </h1>
+  <h3> input #variable and (keyup): </h3>
+  <p style="color: red;"> dùng binding 2ways hay hơn</p>
+  <input #box (keyup)="0">
+  <p>{{box.value}}</p>
+  <p>---------------------------------------------------------</p>
+
+  <h3> input (keyup.enter): </h3>
+  <p>press Enter sau khi type text</p>
+  <p style="color: red;"> dùng binding 2ways [(ngModel)] kết hơp với (keyup.enter) là ok</p>
+  <input #box2 (keyup.enter)="onEnter(box2.value)">
+  <p>{{enterMessage}}</p>
+  <p>---------------------------------------------------------</p>
+
+  <h3> input (blur): </h3>
+  <p style="color: red;">
+    (blur): là event sẽ đc goi khi Edit input từ focus chuyển sang unfocus by clicking elsewhere
+    <br>
+    vì thực tế dùng [(ngModel)] nên ít khi dùng (blur)
+  </p>
+  <input #box3 (blur)="onBlur(box3.value)">
+  <p>{{blurMessage}}</p>
+
+  <p>---------------------------------------------------------</p>
+  <h3> input(keyup.enter) & (blur) & [(ngModel)]:</h3>
+  <p style="color: red;"> thực tế thường áp dụng linh hoạt 3 cách trên</p>
+
+</div>

@@ -5,7 +5,7 @@
     <label *ngFor="let s of students">
       <!-- name = studentGroup: các radio cùng tên sẽ nhóm vào 1 group-->
       <!-- [(ngModel)]="hero" binding 2 ways  -->
-      <!-- sẽ so sánh hero với [value] nếu bằng nhau thì selection -->
+      <!-- sẽ so sánh hero với [value] nếu bằng nhau thì là check, ko bằng nhau là uncheck -->
       <input type="radio" name="studentGroup" [(ngModel)]="student" [value]="s">{{s.name}}
     </label>
     <label><input type="radio" name="studentGroup" (click)="student = null">None of the above</label>

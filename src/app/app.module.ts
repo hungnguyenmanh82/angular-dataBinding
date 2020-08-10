@@ -6,13 +6,13 @@ import { BindingComponent } from './binding/binding.component';
 import { Binding2Component } from './binding2/binding2.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { HtmlAttributeComponent } from './html-attribute/html-attribute.component';
-import { FormInputComponent } from './form-input/form-input.component';
 import { FormsModule } from '@angular/forms';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { Binding2RadioComponent } from './binding2-radio/binding2-radio.component';
+import { InputKeyupComponent } from './input-keyup/input-keyup.component';
 
 
 @NgModule({
@@ -22,12 +22,13 @@ import { Binding2RadioComponent } from './binding2-radio/binding2-radio.componen
     Binding2Component,
     NgForComponent,
     HtmlAttributeComponent,
-    FormInputComponent,
+
     NgClassComponent,
     NgStyleComponent,
     NgIfComponent,
     NgSwitchComponent,
     Binding2RadioComponent,
+    InputKeyupComponent,
 
   ],
   imports: [
