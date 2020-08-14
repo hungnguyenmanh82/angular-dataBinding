@@ -51,5 +51,8 @@
   <!-- style.display là thuộc tính của div. none: sẽ không chiếm không gian  -->
   <div [style.display]="isHidden ? 'none' : 'block'">Show with style.display = none</div>
 
+  <!-- .hidden là CSS class -->
+  <div [class.hidden]= "isHidden"> show with class.hidden </div>
+
   <button class="button" (click)="isHidden = !isHidden">Show/Hidden: {{isHidden}}</button>
 </div>
