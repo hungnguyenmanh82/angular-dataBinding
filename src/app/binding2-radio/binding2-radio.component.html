@@ -1,15 +1,18 @@
 <div class="ng-binding2-radio-component-layout">
-  <h1> binding2-radio.component.html: [(ngModel)] </h1>
-  <div>radio group: {{student|json}} </div>
+  <h1>binding2-radio.component.html: [(ngModel)]</h1>
+  <div>radio group: {{ selectedStudent | json }}</div>
   <p>
     <label *ngFor="let s of students">
       <!-- name = studentGroup: các radio cùng tên sẽ nhóm vào 1 group-->
       <!-- [(ngModel)]="student" binding 2 ways  -->
       <!-- sẽ so sánh student với [value] nếu bằng nhau thì là check, ko bằng nhau là uncheck -->
-      <input type="radio" name="studentGroup" [(ngModel)]="student" [value]="s">{{s.name}}
+      <input type="radio" name="studentGroup" [(ngModel)]="selectedStudent" [value]="s" />{{
+        s.name
+      }}
     </label>
-    <label><input type="radio" name="studentGroup" (click)="student = null">None of the above</label>
+    <label
+      ><input type="radio" name="studentGroup" (click)="selectedStudent = null" />None of the
+      above</label
+    >
   </p>
-
-
 </div>

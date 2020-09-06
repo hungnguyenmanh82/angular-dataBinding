@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Student, students } from './Hero';
+import { Student, STUDENTS } from './Student';
 
 @Component({
   selector: 'app-binding2-radio',
   templateUrl: './binding2-radio.component.html',
-  styleUrls: ['./binding2-radio.component.scss']
+  styleUrls: ['./binding2-radio.component.scss'],
 })
 export class Binding2RadioComponent implements OnInit {
-  student: Student;
-  students: Student[] = students;
-  constructor() { }
+  selectedStudent: Student;
+  students: Student[] = STUDENTS;
+  constructor() {}
 
   ngOnInit(): void {
     // init radio
-    this.student = this.students[1];
+    this.selectedStudent = this.students[1];
   }
-
 }

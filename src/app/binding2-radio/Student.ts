@@ -10,12 +10,9 @@ export class Student {
   }
 }
 
-export const students: Student[] = [
+export const STUDENTS: Student[] = [
   new Student(1, 'hungbeo', 'happy'),
   new Student(2, 'Hunggay', 'sad'),
   new Student(3, 'Long', 'confused'),
-  new Student(4, 'Thao', 'Magneta')
+  new Student(4, 'Thao', 'Magneta'),
 ];
-
-
-

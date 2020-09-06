@@ -45,6 +45,9 @@
     *ngIf: là remove html khỏi DOM
   </p>
 
+  <!-- dùng ng-hidden của angular (nên dùng) -->
+  <div [hidden]="isHidden"> show with [hidden]= "isHidden" </div>
+
   <!-- object.style.visibility = "visible|hidden|collapse|initial|inherit" -->
   <!-- hidden sẽ ẩn đi, nhưng vẫn chiếm ko gian -->
   <div [style.visibility]="isHidden ? 'hidden': 'visible'" >Show with style.visibility = </div>
@@ -53,6 +56,7 @@
 
   <!-- .hidden là CSS class -->
   <div [class.hidden]= "isHidden"> show with class.hidden </div>
+
 
   <button class="button" (click)="isHidden = !isHidden">Show/Hidden: {{isHidden}}</button>
 </div>
