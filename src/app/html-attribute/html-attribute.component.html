@@ -1,15 +1,18 @@
 <div class="html-attribute-component-layout">
   <h1>html-attribute.component:</h1>
-  <p> @input = [] với các html tag chuẩn </p>
-  <p> [src], [class], [style], [disabled], [] ... </p>
+  <p>
+    @input = [] cho các attribute chuẩn của html tag chuẩn: &lt;input&gt;, &lt;div&gt;,
+    &lt;image&gt;, &lt;a&gt;,...
+  </p>
+  <p>[src], [class], [style], [disabled], [] ...</p>
   <!-- url là biến trên *.component.ts -->
   <!-- src là attribute cua <img> tag -->
-  <img [src]="url">
+  <img [src]="url" />
 
   <!-- buttonState = true/false -->
-  <button [disabled]="isDisable" class="button-class"> disable button</button>
+  <button [disabled]="isDisable" class="button-class">disable button</button>
 
   <!-- trong expression là javaScript. Lưu ý single quote -->
   <!-- .button class ở SCSS file -->
-  <button [class.button]="isSpecial" (click)="isSpecial = !isSpecial"> [class] </button>
+  <button [class.button]="isSpecial" (click)="isSpecial = !isSpecial">[class]</button>
 </div>

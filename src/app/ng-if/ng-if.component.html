@@ -1,17 +1,17 @@
 <div class="ng-if-component-layout">
   <h1>ng-if.component: *ngIf</h1>
-  <p style="color: red;">*ngIf="condition": Content is rendered when condition is true</p>
+  <p style="color: red">*ngIf="condition": Content is rendered when condition is true</p>
 
   <div *ngIf="condition">Content to render when condition is true.</div>
 
   <button class="button" (click)="condition = !condition">*ngIf</button>
 
-  <p> --------------------------------------------------------------------------------- </p>
-  <p style="color: red;">*ngIf="condition2; else elseBlock2": dùng với ng-template </p>
+  <p>---------------------------------------------------------------------------------</p>
+  <p style="color: red">*ngIf="condition2; else elseBlock2": dùng với ng-template</p>
 
   <!-- ng-container: ko gen ra thẻ html. CSS ko có nghĩa ở đây. Dùng div thay thế ok -->
   <ng-container *ngIf="condition2; else elseTemplate">
-    <div  class="if-block">content là child của div </div>
+    <div class="if-block">content là child của div</div>
   </ng-container>
   <!-- ng-temlate: phải đc dùng với elseBlock -->
   <ng-template #elseTemplate>
@@ -20,14 +20,16 @@
 
   <button class="button" (click)="condition2 = !condition2">*ngIf else</button>
 
-  <p> --------------------------------------------------------------------------------- </p>
-  <p style="color: red;">*ngIf="condition; then thenBlock else elseBlock": dùng với ng-template </p>
+  <p>---------------------------------------------------------------------------------</p>
+  <p style="color: red">*ngIf="condition; then thenBlock else elseBlock": dùng với ng-template</p>
   <!-- class CSS ko có ý nghĩa ở đây (tested) -->
   <!-- thenBlock và elseBlock: là biến đc định nghĩa ở ng-template  -->
-  <div *ngIf="condition3; then thenBlock else elseBlock" class="ng-if-block">content là child của div</div>
+  <div *ngIf="condition3; then thenBlock; else elseBlock" class="ng-if-block">
+    content là child của div
+  </div>
 
   <!-- #thenBlock: là tên biến đại diện cho 1 instance ng-template -->
-  <ng-template #thenBlock >
+  <ng-template #thenBlock>
     <div class="if-block">Content to render when condition is true.</div>
   </ng-template>
   <!-- #elseBlock: là tên biến đại diện cho 1 instance ng-template -->
@@ -38,25 +40,28 @@
   <button class="button" (click)="condition3 = !condition3">*ngIf then else</button>
 
   <p>-----------------------------------------------------------------------------------</p>
-  <h2> show/hide vs *ngIf:</h2>
-  <p style="color: red;">
+  <h2>show/hide vs *ngIf:</h2>
+  <p style="color: red">
     show/hide: là ẩn đi thôi, ko remove html khỏi DOM
-    <br>
+    <br />
     *ngIf: là remove html khỏi DOM
   </p>
 
-  <!-- dùng ng-hidden của angular (nên dùng) -->
-  <div [hidden]="isHidden"> show with [hidden]= "isHidden" </div>
+  <!-- dùng ng-hidden của angular (nên dùng): sẽ ẩn đi ko chiếm ko gian -->
+  <div [hidden]="isHidden">show with [hidden]= "isHidden"</div>
 
   <!-- object.style.visibility = "visible|hidden|collapse|initial|inherit" -->
   <!-- hidden sẽ ẩn đi, nhưng vẫn chiếm ko gian -->
-  <div [style.visibility]="isHidden ? 'hidden': 'visible'" >Show with style.visibility = </div>
+  <div [style.visibility]="isHidden ? 'hidden' : 'visible'">
+    [style.visibility] = hidden: ẩn đi vẫn chiếm ko gian
+  </div>
   <!-- style.display là thuộc tính của div. none: sẽ không chiếm không gian  -->
-  <div [style.display]="isHidden ? 'none' : 'block'">Show with style.display = none</div>
+  <div [style.display]="isHidden ? 'none' : 'block'">
+    Show with [style.display] = none: ẩn đi ko chiếm ko gian
+  </div>
 
   <!-- .hidden là CSS class -->
-  <div [class.hidden]= "isHidden"> show with class.hidden </div>
+  <div [class.hidden]="isHidden">show with class.hidden</div>
 
-
-  <button class="button" (click)="isHidden = !isHidden">Show/Hidden: {{isHidden}}</button>
+  <button class="button" (click)="isHidden = !isHidden">Show/Hidden: {{ isHidden }}</button>
 </div>
