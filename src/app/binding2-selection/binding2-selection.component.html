@@ -6,7 +6,7 @@
     <label for="role"><b>Role</b></label>
     <select class="form-input" id="role" name="role" [(ngModel)]="roleSelect">
       <!-- selection = so sánh [ngValue] với  [(ngModel)]="roleSelect"-->
-      <!-- dùng [ngValue] thay cho [value] -->
+      <!-- dùng [ngValue] thay cho [value]. [value] chỉ dùng cho String -->
       <option *ngFor="let r of roles" [ngValue]="r">{{ r.name }}</option>
     </select>
   </div>
