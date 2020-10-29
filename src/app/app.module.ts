@@ -13,6 +13,7 @@ import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { Binding2RadioComponent } from './binding2-radio/binding2-radio.component';
 import { InputKeyupComponent } from './input-keyup/input-keyup.component';
+import { Binding2SelectionComponent } from './binding2-selection/binding2-selection.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { InputKeyupComponent } from './input-keyup/input-keyup.component';
     NgSwitchComponent,
     Binding2RadioComponent,
     InputKeyupComponent,
+    Binding2SelectionComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
