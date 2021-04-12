@@ -1,0 +1,28 @@
+<h2>diaglog.component:</h2>
+<p>
+  vd dialog ko dùng Angular Material component.
+  <br />
+  ta tự xây dựng cách truyền dữ liệu giữa Dialog component và parent component
+  <br />
+  mấu chôt nằm ở CSS
+  <br />
+  dùng cách này sẽ hiểu bản chất hơn (ko nên lệ thuộc vào Thư Viện mất thời gian đọc hiểu)
+</p>
+<p style="color: blue">cách 1: dùng component @input[] / output() => xem vd github.</p>
+<p style="color: blue">
+  cách 2: dùng Service Provider => Material Dialog cũng dùng cách này.
+  <br />
+  xem vd github Service Provider của Parent component
+</p>
+
+<button onclick="document.getElementById('dialog-id').style.display='block'">show dialog</button>
+
+<!-- modal: là background full screen 100% bao quanh dialog-->
+<div id="dialog-id" class="modal">
+  <!-- modal-content: là phần xác định kích thước của Dialog -->
+  <div class="modal-content animate">
+    <!-- phần child component nằm gọn trong dialog -->
+    <!-- phần này sẽ chuyền nhận dữ liệu với Parent component-->
+    <app-binding></app-binding>
+  </div>
+</div>

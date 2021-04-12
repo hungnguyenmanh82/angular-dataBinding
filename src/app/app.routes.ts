@@ -1,3 +1,4 @@
+import { DiaglogComponent } from './diaglog/diaglog.component';
 import { TextEditorComponent } from './text-editor/text-editor.component';
 import { Binding2SelectionComponent } from './binding2-selection/binding2-selection.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'ng-style', component: NgStyleComponent },
   { path: 'ng-switch', component: NgSwitchComponent },
   { path: 'text-editor', component: TextEditorComponent },
+  { path: 'dialog', component: DiaglogComponent },
 ];
 
 @NgModule({

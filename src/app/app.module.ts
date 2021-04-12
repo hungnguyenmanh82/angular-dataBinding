@@ -17,6 +17,7 @@ import { InputKeyupComponent } from './input-keyup/input-keyup.component';
 import { Binding2SelectionComponent } from './binding2-selection/binding2-selection.component';
 import { RouterModule } from '@angular/router';
 import { TextEditorComponent } from './text-editor/text-editor.component';
+import { DiaglogComponent } from './diaglog/diaglog.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { TextEditorComponent } from './text-editor/text-editor.component';
     InputKeyupComponent,
     Binding2SelectionComponent,
     TextEditorComponent,
+    DiaglogComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule],
   providers: [],
