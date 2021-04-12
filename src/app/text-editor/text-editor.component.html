@@ -1,0 +1,17 @@
+<h2>text-editor.component:</h2>
+
+<h2>Preview: binding</h2>
+<p>
+  angular sẽ convert &lt;&gt; sang ký tự đặc biệt của XML
+  <br />
+  xem vd: security-innerHtml-editor
+</p>
+<div class="preview-layout">{{ output }}</div>
+
+<textarea
+  id="my-textarea"
+  class="editor"
+  [(ngModel)]="output"
+  name="Comments"
+  placeholder="Comments"
+></textarea>

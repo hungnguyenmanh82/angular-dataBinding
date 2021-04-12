@@ -1,3 +1,22 @@
+<nav>
+  <a [routerLink]="['/binding']" routerLinkActive="active">binding</a>
+  <a [routerLink]="['/binding-2way']" routerLinkActive="active">binding-2way</a>
+  <a [routerLink]="['/binding-radio']" routerLinkActive="active">binding-radio</a>
+  <a [routerLink]="['/binding-selection']" routerLinkActive="active">binding-selection'</a>
+  <a [routerLink]="['/html-attribute']" routerLinkActive="active">html-attribute</a>
+
+  <a [routerLink]="['/input-keyup']" routerLinkActive="active">input-keyup</a>
+  <a [routerLink]="['/ng-class']" routerLinkActive="active">ng-class</a>
+  <a [routerLink]="['/ng-style']" routerLinkActive="active">ng-style</a>
+  <a [routerLink]="['/ng-for']" routerLinkActive="active">ng-for</a>
+  <a [routerLink]="['/ng-switch']" routerLinkActive="active">ng-switch</a>
+  <a [routerLink]="['/text-editor']" routerLinkActive="active">text-editor</a>
+</nav>
+<div class="app-router-outlet-layout">
+  <router-outlet></router-outlet>
+</div>
+
+<p>-------------------------------------------------------</p>
 <app-binding></app-binding>
 <app-binding2></app-binding2>
 

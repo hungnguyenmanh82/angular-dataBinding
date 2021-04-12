@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -14,15 +15,17 @@ import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { Binding2RadioComponent } from './binding2-radio/binding2-radio.component';
 import { InputKeyupComponent } from './input-keyup/input-keyup.component';
 import { Binding2SelectionComponent } from './binding2-selection/binding2-selection.component';
+import { RouterModule } from '@angular/router';
+import { TextEditorComponent } from './text-editor/text-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+
     BindingComponent,
     Binding2Component,
     NgForComponent,
     HtmlAttributeComponent,
-
     NgClassComponent,
     NgStyleComponent,
     NgIfComponent,
@@ -30,8 +33,9 @@ import { Binding2SelectionComponent } from './binding2-selection/binding2-select
     Binding2RadioComponent,
     InputKeyupComponent,
     Binding2SelectionComponent,
+    TextEditorComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
