@@ -1,5 +1,5 @@
+import { Student } from './Student';
 import { Component, OnInit } from '@angular/core';
-import { Student, STUDENTS } from './Student';
 
 @Component({
   selector: 'app-binding2-radio',
@@ -8,11 +8,20 @@ import { Student, STUDENTS } from './Student';
 })
 export class Binding2RadioComponent implements OnInit {
   selectedStudent: Student;
-  students: Student[] = STUDENTS;
-  constructor() {}
+  students: Student[] = [
+    new Student(1, 'hungbeo', 'happy'),
+    new Student(2, 'Hunggay', 'sad'),
+    new Student(3, 'Long', 'confused'),
+    new Student(4, 'Thao', 'Magneta'),
+  ];
 
-  ngOnInit(): void {
+  constructor() {
     // init radio
     this.selectedStudent = this.students[1];
+
+    //code này ko chạy vì so sánh con trỏ
+    // this.selectedStudent = new Student(1, 'hungbeo', 'happy');
   }
+
+  ngOnInit(): void {}
 }

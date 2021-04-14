@@ -6,6 +6,7 @@
       <!-- name = studentGroup: các radio cùng tên sẽ nhóm vào 1 group-->
       <!-- [(ngModel)]="student" binding 2 ways  -->
       <!-- sẽ so sánh selectedStudent với [value] nếu bằng nhau thì là check, ko bằng nhau là uncheck -->
+      <!-- đây là so sánh contro -->
       <input type="radio" name="studentGroup" [(ngModel)]="selectedStudent" [value]="s" />{{
         s.name
       }}
