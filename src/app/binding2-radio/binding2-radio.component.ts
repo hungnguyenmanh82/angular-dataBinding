@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Binding2RadioComponent implements OnInit {
   selectedStudent: Student;
+
   students: Student[] = [
     new Student(1, 'hungbeo', 'happy'),
     new Student(2, 'Hunggay', 'sad'),
