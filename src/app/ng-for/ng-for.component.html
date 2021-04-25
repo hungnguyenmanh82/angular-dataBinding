@@ -1,48 +1,54 @@
 <div class="ngfor-component-layout">
   <h1>ng-for.component: *ngFor</h1>
 
-  <!-- **************************************************************** -->
-  <h3>example 1:</h3>
-  <p style="color: red;">*ngFor="let customer of customers</p>
+  <h3>example 1: ----------------------------------------------------------</h3>
+  <p style="color: red">*ngFor="let customer of customers</p>
   <p>customer.id : customer.name</p>
 
   <ul class="ng-for-list-box">
-    <li *ngFor="let customer of customers">{{customer.id}} : {{customer.name}} </li>
+    <li *ngFor="let customer of customers">{{ customer.id }} : {{ customer.name }}</li>
   </ul>
 
-  <!-- **************************************************************** -->
-  <h3> example 2: </h3>
+  <h3>example 2: ----------------------------------------------------------</h3>
   <!-- vùng trong expression của (click) là JavaScript ko cần {{}} -->
-  <button class="button" *ngFor="let customer of customers" (click)="this.clickButton(customer.name)">{{customer.name}}
+  <button *ngFor="let customer of customers" (click)="this.clickButton(customer.name)">
+    {{ customer.name }}
   </button>
 
-  <h3> *ngFor index:</h3>
-  <p style="color: red;">*ngFor="let customer of customers; let i=index</p>
+  <h3>*ngFor index: ----------------------------------------------------------</h3>
+  <p style="color: red">*ngFor="let customer of customers; let i=index</p>
   <p>index - customer.id : customer.name</p>
 
   <ul class="ng-for-list-box">
-    <li *ngFor="let customer of customers; let i=index">{{i}} - {{customer.id}} : {{customer.name}}</li>
+    <li *ngFor="let customer of customers; let i = index">
+      {{ i }} - {{ customer.id }} : {{ customer.name }}
+    </li>
   </ul>
 
-  <p>----------------------------------------------------------------------</p>
-  <!-- trackby: sẽ check  -->
-  <h3> *ngFor trackBy</h3>
-  <p style="color: red;">*ngFor="let customer of customers; let i=index; trackBy: trackById</p>
+  <h3>*ngFor trackBy: ----------------------------------------------------------</h3>
+  <p style="color: red">*ngFor="let customer of customers; let i=index; trackBy: trackById</p>
   <p>index - customer.id : customer.name</p>
-
-  <button (click)="resetList()">Reset items</button>
-  <button (click)="changeIds()">Change ids</button>
-
 
   <div class="ng-for-list-box">
     <!-- index là biến local có giá trị trong double quote. "i" là biến toàn cục -->
     <!-- trackById(index,customer): là function pointer. Ta phải implement nó ở typeScript -->
     <!-- sẽ so sánh giá trị trả về của Array mới và cũ để update tại customer[index] -->
-    <div *ngFor="let customer of customers; let i=index; trackBy: trackById">
-      {{i}} - {{customer.id}} : {{customer.name}}
+    <div *ngFor="let customer of customers; let i = index; trackBy: trackById">
+      {{ i }} - {{ customer.id }} : {{ customer.name }}
     </div>
-
   </div>
 
+  <h3>test ----------------------------------------------------------</h3>
+  <p>
+    + Xem nội dung của ngFor sẽ thay đổi khi ta tiến hành thay đổi Array hoặc item's properties
+    <br />
+    + Thành phần nào đc add vào *.html thì sẽ đc Angular theo dõi sự thay đổi
+    <br />
+    + Trường hợp dùng Angular Pipe thì có chút khác biệt (xem vd: Angular Pipe)
+  </p>
+  <button (click)="resetList()">Reset items</button>
 
+  <button (click)="changeNewArray()">change new array</button>
+
+  <button (click)="changeItemOfArray()">change item properties</button>
 </div>

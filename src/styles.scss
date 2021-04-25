@@ -1,5 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
+button {
+  font-family: Arial;
+  background-color: #42a948;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  opacity: 0.8;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
 /* https://www.w3schools.com/css/css3_buttons.asp */
 .button {
   background-color: #4caf50; /* Green */
