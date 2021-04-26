@@ -8,6 +8,9 @@
       <!-- selection = so sánh [ngValue] với  [(ngModel)]="roleSelect"-->
       <!-- dùng [ngValue] thay cho [value]. [value] chỉ dùng cho String -->
       <option *ngFor="let role of roles" [ngValue]="role">{{ role.name }}</option>
+
+      <!-- thêm vào ngoài Array, có thể điều chỉnh CSS đc -->
+      <option [ngValue]="roleAll" style="color: Blue">{{ roleAll.name }}</option>
     </select>
   </div>
 </div>

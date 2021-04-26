@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Binding2SelectionComponent implements OnInit {
   public roles: Role[] = ROLES;
+
+  /**
+   * ứng dụng trong thực tế vd: Search all, thay vì để null
+   */
+  public roleAll: Role = new Role(-1, 'all');
   public roleSelect: Role;
   constructor() {}
 
