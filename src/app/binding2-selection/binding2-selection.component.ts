@@ -14,6 +14,10 @@ export class Binding2SelectionComponent implements OnInit {
    */
   public roleAll: Role = new Role(-1, 'all');
   public roleSelect: Role;
+
+  // test ngValue và [selected]
+  public roleSelect2: Role = new Role(-1, 'invalid');
+
   constructor() {}
 
   ngOnInit(): void {

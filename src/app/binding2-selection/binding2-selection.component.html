@@ -13,4 +13,21 @@
       <option [ngValue]="roleAll" style="color: Blue">{{ roleAll.name }}</option>
     </select>
   </div>
+
+  <div class="form-group">
+    <label for="role2"><b>Role 2</b></label>
+    <select class="form-input" id="role2" name="role2" [(ngModel)]="roleSelect2">
+      <!-- selection = so sánh [ngValue] với  [(ngModel)]="roleSelect"-->
+      <!-- dùng [ngValue] thay cho [value]. [value] chỉ dùng cho String -->
+
+      <option *ngFor="let role2 of roles" [ngValue]="role2">
+        {{ role2.name }}
+      </option>
+
+      <!-- thêm vào ngoài Array, có thể điều chỉnh CSS đc -->
+      <option [ngValue]="roleAll" style="color: Blue">
+        {{ roleAll.name }}
+      </option>
+    </select>
+  </div>
 </div>
