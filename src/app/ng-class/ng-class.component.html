@@ -7,7 +7,7 @@
   <!-- nếu viết tường minh như sau thì mỗi thành phần con đc update sẽ update CSS -->
 
   <div [ngClass]="{ saveable: isSaveable, modified: isModified, special: isSpecial }">
-    [ngClass]= " cách 1"
+    [ngClass]="&#123; saveable: isSaveable, modified: isModified, special: isSpecial &#125;"
   </div>
   <div
     [ngClass]="[
@@ -16,16 +16,18 @@
       isSpecial ? 'special' : ''
     ]"
   >
-    [ngClass]= " cách 2"
+    [ngClass]="[ isSaveable ? 'saveable' : ' ', isModified ? 'modified' : ' ', isSpecial ? 'special'
+    : ' ' ]"
   </div>
   <div [class.saveable]="isSaveable" [class.modified]="isModified" [class.special]="isSpecial">
-    [class.ClassName] = cách 3
+    [class.saveable]="isSaveable"
   </div>
 
   <!-- tip trick: dùng dòng này để Jump SCSS class ở trên-->
   <!-- tên CSS ko đc trùng với tên biến trên TypeScript nếu ko sẽ Jump sai -->
   <div class="saveable modified special">jump SCSS in htlm</div>
 
+  <h3>các CSS name:</h3>
   <ul>
     <li>
       <label for="saveable">saveable</label>
